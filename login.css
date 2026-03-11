@@ -1,0 +1,111 @@
+/* login.css - Styling para sa Admin Login ug Signup Forms */
+
+:root {
+    --primary-color: #4a69bd; /* Usa ka mas propesyonal nga blue */
+    --primary-hover: #3c5aa6;
+    --secondary-color: #f1f2f6;
+    --text-color: #343a40;
+    --white: #FFFFFF;
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.login-container {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2.5rem 3rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.login-container .form-description {
+    margin-bottom: 2rem;
+    color: #6c757d;
+}
+
+#admin-login-form, #admin-signup-form, #customer-login-form, #signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#admin-login-form input, #admin-signup-form input, #customer-login-form input, #signup-form input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#admin-login-form input:focus, #admin-signup-form input:focus, #customer-login-form input:focus, #signup-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 105, 189, 0.2);
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.9rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--primary-hover);
+}
+
+.form-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.form-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+#error-message, #signup-message, #login-message {
+    margin-top: 1rem;
+    font-weight: 500;
+}
